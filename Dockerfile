@@ -6,6 +6,11 @@ USER root
 RUN apt-get update 
 RUN apt-get upgrade -y
 
+# >>> IPython-Parallel
+USER $NB_UID
+RUN pip install ipyparallel
+# <<< IPython-Parallel
+
 # Clean image
 USER root
 RUN apt-get autoremove -y
