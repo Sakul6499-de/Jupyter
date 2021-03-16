@@ -9,6 +9,7 @@ RUN apt-get upgrade -y
 # >>> IPython-Parallel
 USER $NB_UID
 RUN pip install ipyparallel
+RUN ipcluster nbextension enable
 # <<< IPython-Parallel
 
 # Clean image
